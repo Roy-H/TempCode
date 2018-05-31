@@ -7,6 +7,23 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid 
+        Background="AliceBlue"
+        HorizontalAlignment="Stretch"
+        VerticalAlignment="Stretch"
+        Drop="Grid_Drop"
+          AllowDrop="True">
+
+        </Grid>
+        <Grid Background="SkyBlue"  Grid.Column="1" AllowDrop="True" Drop="Grid_Drop_Sound">
+            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Sound</TextBlock>
+        </Grid>
     </Grid>
+    
+    
+    
 </Window>
