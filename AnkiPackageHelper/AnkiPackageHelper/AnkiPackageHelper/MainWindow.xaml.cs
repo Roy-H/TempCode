@@ -51,7 +51,7 @@ namespace AnkiPackageHelper
                     {
 
                        
-                    }                 
+                    }          
                 });
                 MessageBox.Show(folder + " extract complete!");
                 List<List<string>> mediaCollection = new List<List<string>>();
@@ -85,7 +85,7 @@ namespace AnkiPackageHelper
                     //Console.WriteLine("Surface: " + reader["sfld"] + "\tBack: " + reader["flds"]);
 
                 }
-
+                Dictionary<string, string> mediamap = new Dictionary<string, string>();
                 if (mediaFiles != null && mediaFiles.Length > 0)
                 {
                     string json = File.ReadAllText(mediaFiles[0]);
@@ -93,7 +93,9 @@ namespace AnkiPackageHelper
                     foreach (var item in jobj)
                     {
                         Console.WriteLine(item.Key + "---"+item.Value);
+                        mediamap[item.Key] = item.Value.ToString();
                     }
+                   
                 }
             }
         }
